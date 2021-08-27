@@ -1,0 +1,453 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <style type="text/css">
+  	*{
+  		box-sizing: border-box;
+  		margin: 0px;
+      font-family: roboto;
+  	}
+  	body{
+      background-color: #2f343a;
+  		padding: 0px;
+  	}
+  	header{
+  		width: 100%;
+  	}
+    main{
+      position: relative;
+    }
+  	a{
+  		text-decoration: none;
+  	}
+
+    .title-h2{
+      margin-top: 15px;
+      color: white;
+      font-size: 23px;
+    }
+    .fz50{
+      font-size: 50px;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+    .fz18{
+      font-size: 18px;
+    }
+    .fz12{
+      font-size: 12px;
+      margin-top: 9px;
+    }
+
+  	.header-top{
+  		display: flex;
+  		justify-content: space-around;
+  		background-color: #cba35f;
+  		height: 45px;
+  		align-items: center;
+      font-size: 12px;
+      color: white;
+  	}
+    .header-top-language a{
+      color: white;
+    }
+  	.header-bottom{
+  		display: flex;
+  		background-color: #2f343a;
+  		height: 100px;
+  		align-items: center;
+  	}
+  	.header-bottom-logo{
+  		width: 45%;
+  		display: flex;
+  		justify-content: center;
+  		align-items: center;
+  	}
+  	.header-bottom-nav{
+  		width: 55%;
+  		display: flex;
+  		justify-content: center;
+  	}
+    .header-bottom-nav a{
+      color: white;
+      font-size: 14px;
+    }
+  	.header-bottom-logo div + div{
+  		margin-left: 12px;
+  	}
+  	.header-bottom-logo > div{
+  		margin-left: 17px;
+  	}
+  	.company-logo{
+  		height: 55px;
+  		font-size: 27px;
+  		border-right: white 2px solid;
+  		padding: 10px 12px 0 0;
+  	}
+    .company-logo a{
+      color: white;
+    }
+    .company-locations{
+      padding-left: 10px;
+    }
+    .company-locations a{
+      position: relative;
+      bottom: 7px;
+      left: 5px;
+      font-size: 14px;
+      color: white;
+    }
+  	.header-bottom-nav a + a{
+  		margin-left: 12px;
+  	}
+    .top-section{
+      height: 500px;
+      background: url('./main-back.png');
+    }
+    .top-section-content{
+      width: 70%;
+      height: 245px;
+      border: #c8a35f 1px solid;
+      position: relative;
+      top: 100px;
+      left: 15%;
+      text-align: center;
+      padding: 25px;
+    }
+    .top-section-content h1{
+      font-size: 64px;
+      font-weight: 700;
+      color: white;
+      line-height: 75px;
+    }
+    .top-section-content > div{
+      font-size: 18px;
+      line-height: 28px;
+      color: white;
+      margin-top: 35px;
+    }
+
+    .section-with-empty-blocks{
+      display: flex;
+      justify-content: space-between;
+    }
+    .empty-block{
+      width: 40%;
+      height: 400px;
+      background-color: #393f47;
+    }
+    .empty-block2{
+      width: 40%;
+      height: 350px;
+      background-color: #393f47;
+      position: absolute;
+      top: -50px;
+      left: 30%;
+      z-index: -1;
+    }
+
+    .content-section{
+      width: 60%;
+      margin: 30px auto;
+      position: absolute;
+      top: 560px;
+      left: 20%;
+    }
+
+    .info-section{
+      display: flex;
+      justify-content: space-between;
+    }
+    .line-over{
+      width: 63px;
+      height: 3px;
+      background-color: #C8A35F;
+    }
+    .info-section-title{
+      width: 270px;
+      height: 71px;
+    }
+    .info-section-text{
+      color: white;
+      width: 290px;
+      height: 50px;
+      margin-top: 25px;
+    }
+    .button{
+      background-color: #C8A35F;
+      color: white;
+      width: 170px;
+      height: 40px;
+      margin-top: 25px;
+    }
+    .info-section-right{
+      position: relative;
+    }
+    .arrow-text{
+      color: #C8A35F;
+      font-size: 16px;
+    }
+    .right-arrow:after{
+      content: url('./right.png');
+      position: relative;
+      top: 7px;
+      left: 10px;
+    }
+    .left-arrow{
+      margin-top: 150px;
+    }
+    .left-arrow:before{
+      content: url('./left.png');
+      position: relative;
+      top: 7px;
+      right: 10px;
+    }
+    .truck-img{
+      position: absolute;
+      top: 10px;
+      left: -360px;
+    }
+    .truck-img img{
+      width: 75%;
+    }
+    .services-section{
+      margin: 120px auto;
+    }
+    .services-list{
+      margin-top: 20px;
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      height: 210px;
+    }
+    .services-list > a{
+      border: #2f343a solid 1px;
+      color: white;
+      font-size: 16px;
+      text-align: center;
+      padding-top: 20px;
+      background-color: #393f47;
+    }
+    .about-company-section{
+      position: relative;
+      top: 0;
+      display: flex;
+      justify-content: space-between;
+    }
+    .about-company-text{
+      margin-top: 15px;
+      color: white;
+      font-size: 14px;
+      width: 350px;
+    }
+    .about-company-pics{
+      text-align: center;
+      color: #2F343A;
+      width: 55%;
+      height: 250px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+    .about-company-pics > div{
+      background-color: white;
+      border: #C8A35F solid 0.25px;
+    }
+    .about-company-pics img{
+      width: 100%;
+      height: 100%;
+    }
+    .maps-section{
+      margin-top: 800px;
+    }
+    .maps-section img{
+      width: 100%;
+    }
+    footer{
+      height: 145px;
+      background-color: #C8A35F;
+    }
+    .footer-row{
+      display: flex;
+      justify-content: space-around;
+      position: relative;
+      top: 50px;
+    }
+    .footer-address{
+      font-size: 14px;
+      color: white;
+    }
+    .contact-footer{
+      color: white;
+      font-size: 14px;
+    }
+  </style>
+  <meta charset="utf-8">
+
+  <title>The HTML5</title>
+  
+</head>
+
+<body>
+	<header>
+		<div class="header-top">
+			<div class="header-top-language">
+				<a href="#">РУС</a>
+				<a href="#">ENG</a>
+				<a href="#">FR</a>
+			</div>
+			<div class="header-top-phone">8 (800) 123-45-67</div>
+			<div class="header-top-email">sales@log.ru</div>
+		</div>
+		<div class="header-bottom">
+			<div class="header-bottom-logo">
+        <div class="company-logo">
+          <a href="#">Company</a>
+        </div>
+        <div class="company-locations">
+          <svg width="19" height="25" viewBox="0 0 19 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9.48264 0C4.43046 0 0.320312 4.11015 0.320312 9.16233C0.320312 11.4832 1.78268 14.7623 4.66697 18.9087C6.77516 21.9397 8.84864 24.2851 8.936 24.3835L9.48264 25L10.0295 24.3835C10.1166 24.2851 12.1901 21.9397 14.2985 18.9087C17.1826 14.7623 18.6452 11.4832 18.6452 9.16233C18.6452 4.11015 14.5348 0 9.48264 0ZM13.1066 18.0622C11.6816 20.1122 10.2414 21.8765 9.48264 22.7766C8.72581 21.879 7.29091 20.1214 5.86688 18.074C3.1945 14.2323 1.78191 11.1506 1.78191 9.16233C1.78191 4.91619 5.2365 1.4616 9.48264 1.4616C13.729 1.4616 17.1834 4.91619 17.1834 9.16233C17.1834 11.1485 15.7737 14.226 13.1066 18.0622Z" fill="#C8A35F"/>
+        </svg>
+        <a href="#">Наши офисы</a>
+        </div>
+			</div>
+			<div class="header-bottom-nav">
+				<nav>
+					<a href="#">УСЛУГИ</a>
+					<a href="#">О КОМПАНИИ</a>
+					<a href="#">ВАКАНСИИ</a>
+					<a href="#">КОНТАКТЫ</a>
+				</nav>
+			</div>
+		</div>
+	</header>
+  <main>
+    <section class="top-section">
+      <div class="top-section-content">
+        <h1>ГРУЗОВЫЕ ПЕРЕВОЗКИ</h1>
+        <div>
+          Перевозка крупногабаритных грузов по России и Европе. Полное экспедирование, страхование, упаковка и хранение грузов
+        </div>
+      </div>
+    </section>
+    <section class="section-with-empty-blocks">
+      <div class="empty-block"></div>
+      <div class="empty-block"></div>
+    </section>
+
+    <section class="content-section">
+      <section class="info-section">
+      <div>
+        <div class="info-section-left">
+          <div class="line-over"></div>
+          <div class="info-section-title">
+            <div class="title-h2">ГРУЗОПЕРЕВОЗКИ ПО ЕВРОПЕ</div>
+          </div>
+          <div class="info-section-text">Страны Евросоюза, а также Украина, Белоруссия со всеми документами.</div>
+          <button class="button">ПОДРОБНЕЕ</button>
+        </div>
+      </div>
+      <div>
+        <div class="info-section-right">
+          <div class="arrow-text right-arrow">СЛЕД</div>
+          <div class="arrow-text left-arrow">НАЗАД</div>
+          <div class="truck-img">
+            <img src="./truck-img.png">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="services-section">
+      <div class="line-over"></div>
+      <div class="title-h2">УСЛУГИ</div>
+      <div class="services-list">
+        <a href="#">
+          <img src="./plane-img.png">
+          <div>АВИАПЕРЕВОЗКИ</div>
+        </a>
+        <a href="#">
+          <img src="./plane-img.png">
+          <div>АВИАПЕРЕВОЗКИ</div>
+        </a>
+        <a href="#">
+          <img src="./plane-img.png">
+          <div>АВИАПЕРЕВОЗКИ</div>
+        </a>
+        <a href="#">
+          <img src="./plane-img.png">
+          <div>АВИАПЕРЕВОЗКИ</div>
+        </a>
+        <a href="#">
+          <img src="./plane-img.png">
+          <div>АВИАПЕРЕВОЗКИ</div>
+        </a>
+        <a href="#">
+          <img src="./plane-img.png">
+          <div>АВИАПЕРЕВОЗКИ</div>
+        </a>
+        <a href="#">
+          <img src="./plane-img.png">
+          <div>АВИАПЕРЕВОЗКИ</div>
+        </a>
+        <a href="#">
+          <img src="./plane-img.png">
+          <div>АВИАПЕРЕВОЗКИ</div>
+        </a>
+      </div>
+    </section>
+    <section class="about-company-section">
+      <div>
+        <div class="line-over"></div>
+        <div class="title-h2">О КОМПАНИИ</div>
+        <div class="about-company-text">
+          Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
+        </div>
+      </div>
+      <div class="about-company-pics">
+        <div>
+          <div class="fz50">48</div>
+          <div class="fz18">офисов</div>
+          <div class="fz12">В Европе и СНГ</div>
+        </div>
+        <div>
+          <div class="fz50">361</div>
+          <div class="fz18">грузовиков</div>
+          <div class="fz12">Volvo, Scania</div>
+        </div>
+        <div>
+          <img src="./truck2-img.png">
+        </div>
+        <div>
+          <img src="./truck2-img.png">
+        </div>
+        <div>
+          <div class="fz50">1500</div>
+          <div class="fz18">сотрудников</div>
+          <div class="fz12">профессионалов</div>
+        </div>
+      </div>
+      <div class="empty-block2"></div>
+    </section>
+    </section>
+    <section class="maps-section">
+      <img src="./maps.png">
+    </section>
+  </main>
+  <footer>
+    <div class="footer-row">
+      <div class="company-logo">
+      <a href="#">Company</a>
+     </div>
+     <div>
+      <div class="footer-address">123456, Санкт-Петербург, Невский пр-кт 127</div>
+      <div class="footer-email">sales@log.ru</div>
+     </div>
+     <div class="contact-footer">
+      <div>+7 (812) 344-56-65</div>
+      <div>+7 (812) 355-56-65</div>
+     </div>
+    </div>
+  </footer>
+</body>
+</html>
